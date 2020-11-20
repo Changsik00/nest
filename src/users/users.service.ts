@@ -23,7 +23,7 @@ export class UsersService {
   }
 
   async create(user: User) {
-    await this.usersRepository.save(user)
+    return await this.usersRepository.save(user)
   }
 
   async update(id: number, updatedUser: User): Promise<User | null> {

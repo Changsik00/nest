@@ -18,12 +18,12 @@ export class UsersController {
 
   @Post()
   create(@Body() user: User) {
-    console.log('#@# user constroller create', user)
     return this.service.create(user)
   }
 
   @Put(':id')
   update(@Param() params, @Body() user: User) {
+    console.log("#@# user", user)
     return this.service.update(params.id, user)
   }
 

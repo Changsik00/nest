@@ -4,7 +4,13 @@
   "port": 3306,
   "username": "root",
   "password": "hello_world",
-  "database": "signal",
+  "database": "mydb",
   "synchronize": true,
-  "entities": ["dist/**/**.entity.js"]
+  "debug": false,
+  "entities": ["dist/**/**.entity.js"],
+  "migrations": ["dist/migrations/**/*.js"],
+  "cli": {
+    "migrationsDir": "migrations"
+  },
+  "migrationsRun": true
 }
